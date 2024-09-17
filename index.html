@@ -12,11 +12,15 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>ShopSmart</h1>
-            <nav>
-                <a href="index.html" aria-label="Home">Home</a>
-                <a href="contact.html" aria-label="Contact">Contact</a>
-                <a href="#signup-form" id="sign-up-btn" aria-label="Sign Up">Sign Up</a>
+            <div class="header-left">
+                <h1>ShopSmart</h1>
+                <nav>
+                    <a href="index.html" aria-label="Home">Home</a>
+                    <a href="contact.html" aria-label="Contact">Contact</a>
+                    <a href="#signup-form" id="sign-up-btn" aria-label="Sign Up">Sign Up</a>
+                </nav>
+            </div>
+            <div class="header-right">
                 <form class="search-form" action="/search" method="get">
                     <input type="text" name="search" placeholder="Search products..." aria-label="Search products">
                     <button type="submit" aria-label="Search">🔍</button>
@@ -24,7 +28,7 @@
                 <div class="cart-container">
                     <a href="cart.html" class="cart-icon" aria-label="Cart">🛒<span id="cart-count">0</span></a>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 

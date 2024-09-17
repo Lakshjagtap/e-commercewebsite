@@ -36,32 +36,88 @@ body {
 
 /* Header styles */
 header {
-    position: sticky; /* Standard syntax */
+    position: fixed; /* Fixed position */
     top: 0; /* Stick to the top */
+    left: 0; /* Align to the left */
     width: 100%; /* Full width */
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: #fff;
     padding: 1em 0;
     z-index: 1000; /* Ensure it stays above other content */
     box-shadow: 0 4px 8px var(--shadow-color); /* Enhanced shadow for header */
+    transition: top 0.3s; /* Smooth transition for sticky effect */
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Default space-between on larger screens */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1em;
 }
 
-header h1 {
-    font-size: 1.8em;
+/* Header elements alignment */
+.header-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end; /* Align right content to the right */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack header content vertically */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .header-left, .header-right {
+        width: 100%; /* Full width for left and right sections */
+        justify-content: space-between; /* Space between items */
+        margin-bottom: 1em; /* Space between left and right sections */
+    }
+
+    .header-right {
+        justify-content: flex-end; /* Align right section items to the right */
+    }
+
+    .search-form {
+        width: 100%; /* Full width for search form */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 0 0.5em; /* Reduce padding on very small screens */
+    }
+
+    .header-left, .header-right {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .search-form {
+        margin-top: 0.5em; /* Adjust margin on small screens */
+    }
+
+    .header-right {
+        align-items: flex-end; /* Align items to the end of the section */
+    }
+}
+
+/* Navigation styles */
 nav {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Space between items if needed */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 nav a {
@@ -81,11 +137,33 @@ nav a:hover {
     box-shadow: 0 4px 10px var(--shadow-color);
 }
 
-/* Search form styles */
+/* Responsive Navigation styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    nav a {
+        margin: 0.5em 0; /* Space between items when stacked */
+        font-size: 0.9em; /* Adjust font size for better fit */
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        margin: 0.5em 0; /* Maintain space between stacked items */
+        font-size: 0.8em; /* Further reduce font size for very small screens */
+        padding: 0.4em 0.8em; /* Adjust padding for a better fit */
+    }
+}
+
+/* Search Form styles */
 .search-form {
     display: flex;
     align-items: center;
     margin: 0 1em;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .search-form input {
@@ -113,6 +191,37 @@ nav a:hover {
     box-shadow: 0 4px 10px var(--shadow-color);
 }
 
+/* Responsive Search Form styles */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column; /* Stack input and button vertically */
+        margin: 0; /* Remove side margins */
+        width: 100%; /* Full width for better fit */
+    }
+
+    .search-form input {
+        width: calc(100% - 0.5em); /* Full width with some margin */
+        margin-right: 0; /* Remove margin-right */
+        margin-bottom: 0.5em; /* Space between input and button */
+    }
+
+    .search-form button {
+        width: 100%; /* Full width for the button */
+        margin: 0; /* Remove margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-form input {
+        padding: 0.4em; /* Adjust padding for small screens */
+    }
+
+    .search-form button {
+        padding: 0.4em; /* Adjust padding for small screens */
+    }
+}
+
+/* Cart styles */
 .cart-container {
     position: relative;
 }
