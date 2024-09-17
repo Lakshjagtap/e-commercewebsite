@@ -2,7 +2,7 @@
 :root {
     --primary-color: #FF6F61; /* Coral */
     --secondary-color: #FFEB3B; /* Bright Yellow */
-    --tertiary-color: #00BFAE; /* Teal */
+    --tertiary-color: #66e01f; /* Teal */
     --background-color: #F5F5F5; /* Light Gray */
     --hover-color: #FF3D00; /* Bright Red */
     --text-color: #212121; /* Almost Black */
@@ -227,7 +227,7 @@ nav a:hover {
 }
 
 .cart-icon {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     font-size: 1.5em;
 }
