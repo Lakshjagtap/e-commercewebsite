@@ -1,0 +1,458 @@
+/* Define CSS variables for easy theming and maintenance */
+:root {
+    --primary-color: #FF6F61; /* Coral */
+    --secondary-color: #FFEB3B; /* Bright Yellow */
+    --tertiary-color: #00BFAE; /* Teal */
+    --background-color: #F5F5F5; /* Light Gray */
+    --hover-color: #FF3D00; /* Bright Red */
+    --text-color: #212121; /* Almost Black */
+    --card-bg: #FFFFFF; /* White card background */
+    --border-color: #DDDDDD; /* Light Gray border color */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* Darker Shadow */
+}
+
+/* Reset some default styles */
+body, h1, h2, h3, p, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the body takes full height to push footer down */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+    padding-top: 60px; /* Adjust based on header height */
+}
+
+/* Header styles */
+header {
+    position: sticky; /* Standard syntax */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 1em 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 4px 8px var(--shadow-color); /* Enhanced shadow for header */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    background: var(--tertiary-color);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    background: var(--primary-color);
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+/* Search form styles */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin: 0 1em;
+}
+
+.search-form input {
+    padding: 0.5em;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 1em;
+    margin-right: 0.5em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-form button {
+    background: var(--secondary-color);
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #fff;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.search-form button:hover {
+    background: var(--hover-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.cart-container {
+    position: relative;
+}
+
+.cart-icon {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.cart-count {
+    background: #FF6F61; /* Coral */
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    font-size: 0.8em;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: var(--text-color);
+}
+
+/* Form container styles */
+.signup-form, .responsive-form, .contact-form {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.signup-form:hover, .responsive-form:hover, .contact-form:hover {
+    box-shadow: 0 6px 12px var(--shadow-color);
+    transform: scale(1.02);
+}
+
+.signup-form h2, .responsive-form h2, .contact-form h2 {
+    margin-bottom: 1em;
+    font-size: 1.8em;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.signup-form label, .responsive-form label, .contact-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.signup-form input, .responsive-form input[type="email"], .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signup-form input:focus, .responsive-form input[type="email"]:focus, .contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form button, .responsive-form button, .contact-form button {
+    width: 100%;
+    padding: 0.75em;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.signup-form button:hover, .responsive-form button:hover, .contact-form button:hover {
+    background: #e55f47; /* Darker Coral */
+    transform: scale(1.05);
+}
+
+/* Responsive form styling */
+@media (max-width: 768px) {
+    .responsive-form {
+        padding: 1.5em;
+    }
+
+    .responsive-form h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-form {
+        padding: 1em;
+    }
+
+    .responsive-form h2 {
+        font-size: 1.4em;
+    }
+
+    .responsive-form input[type="email"] {
+        padding: 0.6em;
+    }
+
+    .responsive-form button {
+        font-size: 1em;
+        padding: 0.7em;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-form {
+        margin-top: 1em;
+    }
+
+    .contact-form, .signup-form {
+        padding: 1.5em;
+    }
+}
+
+/* Main content styles */
+main {
+    padding: 2em 1em;
+    flex: 1; /* Allows the main content to grow and push the footer down */
+}
+
+/* Category and product grids */
+.category-grid, .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+/* Cards styling */
+.category-card, .product-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden;
+    width: calc(25% - 1em);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.category-card:hover, .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+/* Product image styling */
+.category-card img, .product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images cover the container */
+}
+
+/* CTA button styling */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 1em;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    transform: scale(1.1);
+}
+
+/* Product details */
+.product-details {
+    text-align: center;
+    margin: 2em auto;
+    max-width: 600px;
+}
+
+.product-details img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover; /* Ensures images cover the container */
+}
+
+.product-details #add-to-cart-button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    background: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1em;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.product-details #add-to-cart-button:hover {
+    background: var(--hover-color);
+}
+
+/* Cart styles */
+.cart {
+    padding: 2em 1em;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1em 0;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.remove-from-cart {
+    background: #FF4C4C; /* Bright red */
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.remove-from-cart:hover {
+    background: #BF3D3D; /* Darker red */
+}
+
+/* Footer styles */
+footer {
+    background: var(--card-bg);
+    padding: 2em 1em; /* Add more padding for better spacing */
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* Footer text */
+footer p {
+    margin-bottom: 1em;
+    color: var(--text-color);
+}
+
+/* Social icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease, background 0.3s ease;
+    padding: 0.5em;
+    border-radius: 50%;
+    background: var(--background-color);
+    display: inline-block;
+    box-shadow: 0 2px 4px var(--shadow-color); /* 3D effect */
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    background: #d0e0e3; /* Light Blue Gray */
+    transform: translateY(-2px); /* Slight 3D effect */
+    box-shadow: 0 6px 12px var(--shadow-color); /* Enhanced shadow for hover */
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5em 1em;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 1em;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin: 0 5px;
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .category-card, .product-card {
+        width: calc(33.33% - 1em);
+    }
+}
+
+@media (max-width: 768px) {
+    .category-card, .product-card {
+        width: calc(50% - 1em);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-card, .product-card {
+        width: 100%;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-form {
+        margin-top: 1em;
+    }
+
+    .contact-form, .signup-form {
+        padding: 1.5em;
+    }
+}

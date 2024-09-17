@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopSmart - Your one-stop shop for electronics, cosmetics, clothing, and stationery. Discover top products and great deals today!">
+    <meta name="keywords" content="electronics, cosmetics, clothing, stationery, shopping, online store">
+    <title>ShopSmart - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>ShopSmart</h1>
+            <nav>
+                <a href="index.html" aria-label="Home">Home</a>
+                <a href="contact.html" aria-label="Contact">Contact</a>
+                <a href="#signup-form" id="sign-up-btn" aria-label="Sign Up">Sign Up</a>
+                <form class="search-form" action="/search" method="get">
+                    <input type="text" name="search" placeholder="Search products..." aria-label="Search products">
+                    <button type="submit" aria-label="Search">🔍</button>
+                </form>
+                <div class="cart-container">
+                    <a href="cart.html" class="cart-icon" aria-label="Cart">🛒<span id="cart-count">0</span></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="categories">
+            <h2>Product Categories</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="images/Electronics.png" alt="Electronics category image">
+                    <h3>Electronics</h3>
+                    <p>Explore the latest in electronics, from smartphones to laptops.</p>
+                    <a href="#electronics" class="cta-button">Shop Now</a>
+                </div>
+
+                <div class="category-card">
+                    <img src="images/Cosmetics.png" alt="Cosmetics category image">
+                    <h3>Cosmetics</h3>
+                    <p>Discover top cosmetics and skincare products.</p>
+                    <a href="#cosmetics" class="cta-button">Shop Now</a>
+                </div>
+
+                <div class="category-card">
+                    <img src="images/Clothing.png" alt="Clothing category image">
+                    <h3>Clothing</h3>
+                    <p>Check out our latest clothing collections for men and women.</p>
+                    <a href="#clothing" class="cta-button">Shop Now</a>
+                </div>
+
+                <div class="category-card">
+                    <img src="images/Stationary.png" alt="Stationery category image">
+                    <h3>Stationery</h3>
+                    <p>Find a variety of stationery products for all your needs.</p>
+                    <a href="#stationery" class="cta-button">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="electronics" class="product-section">
+            <h2>Electronics</h2>
+            <div class="product-grid">
+                <div class="product-card" data-name="iPhone 15 Pro Max" data-price="1,00,999 INR">
+                    <img src="images/iPhone-15-Pro.png" alt="iPhone 15 Pro Max - Latest model with cutting-edge technology">
+                    <h3>iPhone 15 Pro Max</h3>
+                    <p>Latest model with cutting-edge technology.</p>
+                    <div class="price">₹1,00,999</div>
+                    <a href="product-details.html?product=iphone_15_pro_max" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Samsung S26" data-price="120,999 INR">
+                    <img src="images/SamsungGalaxyS26.png" alt="Samsung S26 - Latest model with cutting-edge technology">
+                    <h3>Samsung S26</h3>
+                    <p>Latest model with cutting-edge technology.</p>
+                    <div class="price">₹120,999</div>
+                    <a href="product-details.html?product=samsung_s26" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Oppo Reno 12 Pro Max" data-price="40,999 INR">
+                    <img src="images/Oppo Reno 12 pro.png" alt="Oppo Reno 12 Pro Max - Latest model with cutting-edge technology">
+                    <h3>Oppo Reno 12 Pro Max</h3>
+                    <p>Latest model with cutting-edge technology.</p>
+                    <div class="price">₹40,999</div>
+                    <a href="product-details.html?product=oppo_reno_12_pro_max" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Samsung LCD" data-price="₹105,599 INR">
+                    <img src="images/Samsung LCD.png" alt="Samsung LCD - Stunning visuals with 4K resolution">
+                    <h3>Samsung LCD</h3>
+                    <p>Stunning visuals with 4K resolution.</p>
+                    <div class="price">₹105,599</div>
+                    <a href="product-details.html?product=samsung_lcd" class="cta-button">View Details</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="cosmetics" class="product-section">
+            <h2>Cosmetics</h2>
+            <div class="product-grid">
+                <div class="product-card" data-name="Luxury Lipstick" data-price="₹650 INR">
+                    <img src="images/lipstick.png" alt="Luxury Lipstick">
+                    <h3>Luxury Lipstick</h3>
+                    <p>Rich color and smooth application.</p>
+                    <div class="price">₹650</div>
+                    <a href="product-details.html?product=luxury_lipstick" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Eye Liner Pencil" data-price="450 INR">
+                    <img src="images/Eye linear.png" alt="Eye Liner Pencil">
+                    <h3>Eye Liner Pencil</h3>
+                    <p>Rich color and smooth application.</p>
+                    <div class="price">₹450</div>
+                    <a href="product-details.html?product=eye_liner_pencil" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Himalaya Kajal" data-price="550 INR">
+                    <img src="images/himalya-kajal.png" alt="Himalaya Kajal">
+                    <h3>Himalaya Kajal</h3>
+                    <p>Rich color and smooth application.</p>
+                    <div class="price">₹550</div>
+                    <a href="product-details.html?product=himalaya_kajal" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Anti-Aging Cream" data-price="1,099 INR">
+                    <img src="images/Anti aging cream.png" alt="Anti-Aging Cream">
+                    <h3>Anti-Aging Cream</h3>
+                    <p>Keep your skin youthful and radiant.</p>
+                    <div class="price">₹1,099</div>
+                    <a href="product-details.html?product=anti_aging_cream" class="cta-button">View Details</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="clothing" class="product-section">
+            <h2>Clothing</h2>
+            <div class="product-grid">
+                <div class="product-card" data-name="Men's T-Shirt" data-price="1,299 INR">
+                    <img src="images/menstshirt1.png" alt="Men's T-Shirt">
+                    <h3>Men's T-Shirt</h3>
+                    <p>Comfortable and stylish for any occasion.</p>
+                    <div class="price">₹1,299</div>
+                    <a href="product-details.html?product=mens_tshirt1" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Men's T-Shirt" data-price="999 INR">
+                    <img src="images/menstshirt2.png" alt="Men's T-Shirt">
+                    <h3>Men's T-Shirt</h3>
+                    <p>Comfortable and stylish for any occasion.</p>
+                    <div class="price">₹999</div>
+                    <a href="product-details.html?product=mens_tshirt2" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Women's Dress" data-price="1279 INR">
+                    <img src="images/Womendress1.png" alt="Women's Dress">
+                    <h3>Women's Dress</h3>
+                    <p>Elegant and perfect for special events.</p>
+                    <div class="price">₹1,279</div>
+                    <a href="product-details.html?product=womens_dress1" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Women's Dress" data-price="1,379 INR">
+                    <img src="images/Womendress2.png" alt="Women's Dress">
+                    <h3>Women's Dress</h3>
+                    <p>Elegant and perfect for special events.</p>
+                    <div class="price">₹1,379</div>
+                    <a href="product-details.html?product=womens_dress2" class="cta-button">View Details</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="stationery" class="product-section">
+            <h2>Stationery</h2>
+            <div class="product-grid">
+                <div class="product-card" data-name="Notebook" data-price="459 INR">
+                    <img src="images/Notebooks.png" alt="Notebook">
+                    <h3>Notebook</h3>
+                    <p>Perfect for notes and sketches.</p>
+                    <div class="price">₹459</div>
+                    <a href="product-details.html?product=notebook" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Colors" data-price="819 INR">
+                    <img src="images/colors.png" alt="Colors">
+                    <h3>Colors</h3>
+                    <p>Perfect for notes and sketches.</p>
+                    <div class="price">₹819</div>
+                    <a href="product-details.html?product=colors" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Color Pens" data-price="719 INR">
+                    <img src="images/colorpens.png" alt="Color Pens">
+                    <h3>Color Pens</h3>
+                    <p>Perfect for notes and sketches.</p>
+                    <div class="price">₹719</div>
+                    <a href="product-details.html?product=color_pens" class="cta-button">View Details</a>
+                </div>
+
+                <div class="product-card" data-name="Pen Set" data-price="429 INR">
+                    <img src="images/PenSet.png" alt="Pen Set">
+                    <h3>Pen Set</h3>
+                    <p>High-quality pens for smooth writing.</p>
+                    <div class="price">₹429</div>
+                    <a href="product-details.html?product=pen_set" class="cta-button">View Details</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="signup-form" class="responsive-form">
+            <h2>Stay Updated!</h2>
+            <form action="/subscribe" method="post">
+                <label for="subscribe-email" class="sr-only">Email for newsletter</label>
+                <input type="email" name="email" placeholder="Enter your email to sign up for our newsletter" id="subscribe-email" required aria-label="Email for newsletter">
+                <button type="submit" id="subscribe-button">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Learn more about our <a href="contact.html">contact us</a>.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/yourprofile" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/yourprofile" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/yourprofile" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2024 ShopSmart. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
