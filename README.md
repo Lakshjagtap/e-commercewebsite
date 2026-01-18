@@ -2,7 +2,9 @@ E-Commerce Website
     A responsive frontend e-commerce website designed to showcase product categories, pricing, and a clean shopping interface. 
     This project focuses on UI design, layout structuring, and frontend development, and is deployed live using GitHub Pages.
 
-🔗 Live Demo: https://lakshjagtap.github.io/e-commercewebsite/
+🔗 Live Demo: 
+      
+      https://lakshjagtap.github.io/e-commercewebsite/
 
 🚀 Features
 
@@ -26,19 +28,19 @@ E-Commerce Website
 -GitHub Pages – Live hosting
 
 📂 Project Structure
-e-commercewebsite/
-│
-├── index.html            # Main homepage
-├── cart.html             # Shopping cart page
-├── contact.html          # Contact form page
-├── product-details.html  # Individual product page
-├── style.css             # CSS styling
-├── script.js             # JavaScript logic for homepage
-├── cart.js               # JavaScript logic for cart page
-├── contact.js            # JavaScript logic for contact form
-├── product-details.js    # JavaScript logic for product details
-├── images/               # Product and website images
-└── README.md             # Project documentation
+
+    e-commercewebsite/
+        ── index.html            # Main homepage
+        ── cart.html             # Shopping cart page
+        ── contact.html          # Contact form page
+        ── product-details.html  # Individual product page
+        ── style.css             # CSS styling
+        ── script.js             # JavaScript logic for homepage
+        ── cart.js               # JavaScript logic for cart page
+        ── contact.js            # JavaScript logic for contact form
+        ── product-details.js    # JavaScript logic for product details
+        ── images/               # Product and website images
+        ── README.md             # Project documentation
 
 ⚙️ Project Overview
 
